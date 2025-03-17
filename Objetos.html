@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Persona y Array</title>
+</head>
+<body>
+    <h1>Consulta la consola para ver las presentaciones</h1>
+    <script>
+        // 1. Crea un objeto llamado persona con las propiedades nombre, edad y ciudad
+        function Persona(nombre, edad, ciudad) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.ciudad = ciudad;
+        }
+
+        // 2. Agrega un método llamado presentarse
+        Persona.prototype.presentarse = function() {
+            return `Hola, me llamo ${this.nombre} y vivo en ${this.ciudad}.`;
+        };
+
+        // 3. Crea un array de objetos persona
+        const personas = [
+            new Persona("Ana", 25, "Ciudad de México"),
+            new Persona("Luis", 30, "Guadalajara"),
+            new Persona("María", 28, "Monterrey"),
+            new Persona("Carlos", 22, "Puebla"),
+            new Persona("Sofía", 27, "Cancún")
+        ];
+
+        // Usa un bucle para mostrar la presentación de cada persona
+        console.log("Presentaciones de las personas:");
+        for (let persona of personas) {
+            console.log(persona.presentarse());
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Flecha en JavaScript</title>
+</head>
+<body>
+    <h1>Consulta la consola para ver los resultados</h1>
+    <script>
+        // 1. Función flecha "saludar" que recibe un nombre y devuelve un mensaje de saludo
+        const saludar = nombre => `¡Hola, ${nombre}! Bienvenido a JavaScript.`;
+        console.log(saludar("Cole"));
+
+        // 2. Función flecha que calcula el área de un círculo dado su radio
+        const calcularAreaCirculo = radio => Math.PI * Math.pow(radio, 2);
+        console.log("El área de un círculo con radio 5 es:", calcularAreaCirculo(5));
+
+        // 3. Función flecha que recibe un array de números y devuelve la suma de todos sus elementos
+        const sumarElementos = numeros => numeros.reduce((acumulador, actual) => acumulador + actual, 0);
+        const arrayNumeros = [1, 2, 3, 4, 5];
+        console.log("La suma de los elementos del array [1, 2, 3, 4, 5] es:", sumarElementos(arrayNumeros));
+    </script>
+</body>
+</html>

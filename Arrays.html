@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Arrays en JavaScript</title>
+</head>
+<body>
+    <h1>Consulta la consola para ver los resultados</h1>
+    <script>
+        // 1. Declara un array con 5 nombres de frutas
+        const frutas = ["Manzana", "Plátano", "Naranja", "Fresa", "Mango"];
+
+        // 2. Usa un bucle para imprimir cada fruta en la consola
+        console.log("Lista de frutas:");
+        for (let fruta of frutas) {
+            console.log(fruta);
+        }
+
+        // 3. Función flecha que recibe un array de números y devuelve un nuevo array con los números multiplicados por 2
+        const multiplicarPorDos = numeros => numeros.map(numero => numero * 2);
+        const numeros = [1, 2, 3, 4, 5];
+        const numerosMultiplicados = multiplicarPorDos(numeros);
+        console.log("Array original:", numeros);
+        console.log("Array multiplicado por 2:", numerosMultiplicados);
+
+        // 4. Ordena el array de frutas alfabéticamente y muestra el resultado en la consola
+        const frutasOrdenadas = frutas.slice().sort(); // Usamos slice() para no modificar el array original
+        console.log("Frutas ordenadas alfabéticamente:", frutasOrdenadas);
+    </script>
+</body>
+</html>
